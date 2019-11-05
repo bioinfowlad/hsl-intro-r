@@ -1,7 +1,7 @@
 ---
 title: "Intro to R and RStudio"
 author: "Strauss Health Sciences Library"
-date: "July 17, 2019"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output: pdf_document
 ---
 
@@ -44,7 +44,7 @@ R is a programming language originally designed for statistical computing. It ha
 
 RStudio makes programming in R easier. RStudio is an IDE (Integrated Development Environment) for R that includes all relevant documentation and syntax checking at the ready as well as tools for quick data exploration and document preparation.
 
-![Default RStudio Interface](RStudio-Screenshot.png)
+![Default RStudio Interface](rstudio-ui.png)
 
 RStudio can also be a tool for reproducible research. That is, we can use RStudio as a sort of laboratory notebook in case we forget where we put things or how we did things, something that is very helpful given the sprawling capabilities of the R platform.
 
@@ -157,14 +157,6 @@ Example 1: I forgot the syntax for some commands
 In what follows, feel free to type into the console the commands above and run them instantly or, as intended, type them as part of the script you are saving. Then select the lines you want to run and press the Run button in RStudio. Use `#` to write comments and notes liberally in your script.
 
 Example 2: How do I do regression in R?
-
-*`chunk 7`*
-```{r}
-??regression
-# The double question mark is really shorthand for the help.search command:
-help.search('cohen kappa')
-```
-
 
 ## Let's start playing with our datasets
 You should have `ecolidata.csv` in your working directory.
@@ -423,3 +415,5 @@ Other web resources:
 - RStudio downloadable cheatsheets: <https://www.rstudio.com/resources/cheatsheets/>
 - Videos from rstudio::conf <https://www.rstudio.com/resources/videos/rstudioconf-2018-talks/>
 - R blog aggregator: <https://www.r-bloggers.com/>
+- A curated list of the better R packages: <https://awesome-r.com/>
+
