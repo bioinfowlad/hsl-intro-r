@@ -392,7 +392,11 @@ library(readxl)
 
 - Swirl <http://swirlstats.com/students.html>
 
+- Learnr Tutorials (see *Tutorial* tab on upper-right panel of RStudio)
+
 - R base graphics: an Idiot's guide <https://rpubs.com/SusanEJohnston/7953>
+
+
 
 For some more recommended introductory tutorials:
 
