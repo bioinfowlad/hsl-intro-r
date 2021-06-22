@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE, warning = FALSE)
 If you haven't already, install R and RStudio on your computer:
 
 Instructions for installing R: <https://cran.r-project.org>
+
 Instructions for installing RStudio: <https://www.rstudio.com/products/rstudio/download/#download>
 
 You may also download the toy datasets we'll be working with:
@@ -116,15 +117,7 @@ a <- c(1,2,3,4)
 b <- exp(log(a))
 ```
 
-R is full of more sophisticated functions
-
-*`chunk 5`*
-```{r}
-linreg <- lm(y~x) #linreg is now an object containing the model and info of the fit
-summary(linreg)
-```
-
-But you can also define your own:
+R is full of more sophisticated functions, but you can also define your own:
 
 *`chunk 5b`*
 ```{r custom-function}
@@ -228,7 +221,7 @@ sizematrix <- cbind(straindata[,1],straindata[,7]) # makes a table from columns
 
 rowmatrix <- rbind(straindata[5,],straindata[8,]) # makes a table from rows
 
-sample_size <- data.frame(straindata$sample, straindata$genome_size)
+sample_size <- data.frame(straindata$sample, straindata$genome_size) # another way of making a table from columns
 
 write.csv(sample_size,file="sample_size")
 ```
@@ -332,18 +325,6 @@ hist(inflammation$day30, main="Day 30 Inflammation", xlab="Inflammation Level",
      ylab="Frequency", col="blue")
 ```
 
-### Disgression: the `apply` function
-
-When dealing with large tables of data, even vectorization may not be enough to elegantly transform data. The apply function lets us apply functions over multiple rows or columns of a data table at once.
-
-*`chunk 26`*
-```{r}
-apply(inflammation[2:6,3:32],MARGIN=1,FUN=mean)
-# Mean inflamation of first five patients over all days
-apply(inflammation[,3:5],MARGIN=2,FUN=mean)
-# Mean inflammation of all patients on first three days
-```
-
 ### Bar Plot
 
 *`chunk 26b`*
@@ -406,7 +387,7 @@ For some more recommended introductory tutorials:
 
 Some of the best books to learn R and RStudio are **free**:
 
-**Hands-On Programming with R** (https://rstudio-education.github.io/hopr/)
+**Hands-On Programming with R** (<https://rstudio-education.github.io/hopr/>)
 "This book will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.”
 
 Once you are a bit familiar with R and RStudio you can dive into the most useful data science packages by going through this more advanced book:
@@ -417,7 +398,7 @@ Once you are a bit familiar with R and RStudio you can dive into the most useful
 Other web resources:
 
 - RStudio downloadable cheatsheets: <https://www.rstudio.com/resources/cheatsheets/>
-- Videos from rstudio::conf <https://www.rstudio.com/resources/videos/rstudioconf-2018-talks/>
+- Videos from rstudio <https://rstudio.com/resources/webinars/>
 - R blog aggregator: <https://www.r-bloggers.com/>
-- A curated list of the better R packages: <https://awesome-r.com/>
+- A curated list of the better R packages: <https://github.com/qinwf/awesome-R>
 
