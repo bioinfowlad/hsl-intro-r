@@ -149,7 +149,7 @@ Example 1: I forgot the syntax for some commands
 
 In what follows, feel free to type into the console the commands above and run them instantly or, as intended, type them as part of the script you are saving. Then select the lines you want to run and press the Run button in RStudio. Use `#` to write comments and notes liberally in your script.
 
-Example 2: How do I do regression in R?
+Example 2: How do I find documentation on regression in R?
 
 ## Let's start playing with our datasets
 You should have `ecolidata.csv` in your working directory.
